@@ -6,4 +6,5 @@ public abstract class IPv4Address {
     int thirdOctet;
     int forthOctet;
     public abstract void setIPAddress(String address);
+    // TODO how to store ip addresses
 }
