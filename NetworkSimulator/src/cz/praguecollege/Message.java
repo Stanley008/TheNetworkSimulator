@@ -5,4 +5,6 @@ public abstract class Message {
     public abstract int getProtocol();
     public abstract String getContent();
     public abstract void setContent(String content);
+    // TODO what a message is composed of
+    // TODO is it the same as packet, frame or ...
 }

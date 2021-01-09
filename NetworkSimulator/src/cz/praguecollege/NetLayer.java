@@ -7,7 +7,7 @@ public class NetLayer implements Layer, EventReciever{
     public void insertFromUpperLayer(Message msg) {
         int protocolID = msg.getProtocol();
         for(var protocol:netProtocols){
-            if(protocol.getProtocolID() == protocolID){
+            if (protocol.getProtocolID() == protocolID){
                 //TODO
             }
         }

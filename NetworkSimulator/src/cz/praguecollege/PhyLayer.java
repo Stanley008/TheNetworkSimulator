@@ -15,6 +15,7 @@ public class PhyLayer implements Layer, EventReciever{
     }
 
     LinkedList<PhyInterface> phyInterfaces;
+    // TODO what does phy interface hold (only connects to netadaptor?)
 
     @Override
     public void onEvent(Event event) {

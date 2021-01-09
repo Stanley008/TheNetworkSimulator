@@ -4,7 +4,7 @@ package cz.praguecollege;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	// TODO Design patterns: how they are related to the features assigned
 
     }
 }
