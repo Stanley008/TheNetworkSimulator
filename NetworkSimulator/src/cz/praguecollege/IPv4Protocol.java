@@ -7,4 +7,7 @@ public class IPv4Protocol implements  NetProtocol {
     }
     IPv4Address address;
     IPv4Interface ipv4interface = new IPv4Interface(address);
+    public void setAddress(IPv4Address address) {
+        this.address = address;
+    }
 }

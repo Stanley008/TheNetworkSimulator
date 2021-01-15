@@ -1,10 +1,9 @@
 package cz.praguecollege;
 
-public abstract class IPv4Address {
-    int firstOctet;
-    int secondOctet;
-    int thirdOctet;
-    int forthOctet;
-    public abstract void setIPAddress(String address);
-    // TODO how to store ip addresses
+public class IPv4Address extends IPAddress {
+
+    public int sliceIP(String ip, int numOctet) {
+        String[] addresses = ip.split("\\.");
+        return Integer.parseInt(String.valueOf(addresses[numOctet]));
+    }
 }
