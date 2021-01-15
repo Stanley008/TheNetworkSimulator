@@ -2,7 +2,7 @@ package cz.praguecollege;
 
 import java.util.LinkedList;
 
-public class LinkLayer implements Layer, EventReciever {
+public class LinkLayer extends Layer implements EventReciever {
     @Override
     public void insertFromUpperLayer(Message msg) {
         // TODO what does each layer process with these methods

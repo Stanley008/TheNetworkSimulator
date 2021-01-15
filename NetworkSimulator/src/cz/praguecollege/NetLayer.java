@@ -2,7 +2,7 @@ package cz.praguecollege;
 
 import java.util.LinkedList;
 
-public class NetLayer implements Layer, EventReciever{
+public class NetLayer extends Layer implements EventReciever{
     @Override
     public void insertFromUpperLayer(Message msg) {
         int protocolID = msg.getProtocol();

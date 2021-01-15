@@ -2,7 +2,7 @@ package cz.praguecollege;
 
 import java.util.LinkedList;
 
-public class PhyLayer implements Layer, EventReciever{
+public class PhyLayer extends Layer implements EventReciever{
 
     @Override
     public void insertFromUpperLayer(Message msg) {
