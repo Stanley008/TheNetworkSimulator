@@ -12,4 +12,9 @@ public class IPv4Interface implements NetInterface {
     public int getProtocol() {
         return 4;
     }
+
+    @Override
+    public IPAddress getIP() {
+        return address;
+    }
 }
