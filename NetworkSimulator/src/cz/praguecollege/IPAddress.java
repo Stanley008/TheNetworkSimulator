@@ -6,6 +6,10 @@ public abstract class IPAddress {
     int thirdOctet;
     int forthOctet;
 
+    int protocol;
+
+    public int getProtocol() {return  protocol;}
+
     public int getFirstOctet() {
         return firstOctet;
     }
