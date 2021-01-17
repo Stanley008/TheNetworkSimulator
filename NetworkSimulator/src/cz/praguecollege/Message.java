@@ -4,7 +4,7 @@ public abstract class Message {
     private Message encapsulatedMessage;
     public IPAddress destinationIP;
     public IPAddress sourceIP;
-    private String rawData;
+    public String rawData;
 
     public void encapsulate(Message message){
         encapsulatedMessage = message;
