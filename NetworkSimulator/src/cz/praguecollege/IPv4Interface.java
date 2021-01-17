@@ -7,4 +7,9 @@ public class IPv4Interface implements NetInterface {
     public IPv4Interface(IPv4Address address) {
         this.address = address;
     }
+
+    @Override
+    public int getProtocol() {
+        return 4;
+    }
 }
