@@ -1,6 +1,20 @@
 package cz.praguecollege;
 
 public abstract class Message {
+    private Message encapsulatedMessage;
+    public IPAddress destinationIP;
+    public IPAddress sourceIP;
+    private String rawData;
+
+    public void encapsulate(Message message){
+        encapsulatedMessage = message;
+    }
+
+    public Message decapsulate(){
+        Message msg = encapsulatedMessage;
+        encapsulatedMessage = null;
+        return msg;
+    }
 
     public abstract int getProtocol();
     public abstract String getContent();
