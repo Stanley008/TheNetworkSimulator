@@ -1,8 +1,6 @@
 package cz.praguecollege;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 enum EventType {
     CHECK_UPPER_QUEUE,
@@ -11,22 +9,22 @@ enum EventType {
 
 public class Event {
     private final EventType type;
-    private final Date time;
+    private final Long timestamp;
 
-    public static Event createEvent(EventType type, Date time){
-        return new Event(type, time);
+    public static Event createEvent(EventType type, Long timestamp){
+        return new Event(type, timestamp);
     }
 
-    private Event(EventType type, Date time){
+    private Event(EventType type, Long timestamp){
         this.type = type;
-        this.time = time;
+        this.timestamp = timestamp;
     }
 
     public EventType getType(){
         return type;
     }
 
-    public Date getTime(){
-        return time;
+    public Long getTime(){
+        return timestamp;
     }
 }
