@@ -1,5 +1,7 @@
 package cz.praguecollege;
 
+import cz.praguecollege.channel.Channel;
+
 import java.util.LinkedList;
 
 public class Simulation {
