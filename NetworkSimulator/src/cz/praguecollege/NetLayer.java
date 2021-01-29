@@ -1,28 +1,26 @@
 package cz.praguecollege;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
-public class NetLayer implements Layer, EventReciever{
-    @Override
-    public void insertFromUpperLayer(Message msg) {
-        int protocolID = msg.getProtocol();
-        for(var protocol:netProtocols){
-            if(protocol.getProtocolID() == protocolID){
-                //TODO
-            }
-        }
-    }
+public class NetLayer extends Layer implements EventReciever{
 
-    @Override
-    public void insertFromLowerLayer(Message msg) {
-        //TODO
-    }
 
     private LinkedList<NetInterface> netInterfaces;
     private LinkedList<NetProtocol> netProtocols;
 
     @Override
     public void onEvent(Event event) {
+        Message msg;
+        switch(event.getType()){
+            case CHECK_LOWER_QUEUE:
+                msg = getNextFromLowerLayer();
 
+                break;
+            case CHECK_UPPER_QUEUE:
+                msg = getNextFromUpperLayer();
+
+                break;
+        }
     }
 }
