@@ -10,6 +10,5 @@ public abstract class Device {
 
     private LinkedList<NetAdapter> netAdapters;
 
-    // TODO switch implementation?
 
 }

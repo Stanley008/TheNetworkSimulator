@@ -3,20 +3,16 @@ package cz.praguecollege;
 import java.util.LinkedList;
 
 public class LinkLayer extends Layer implements EventReciever {
-    @Override
-    public void insertFromUpperLayer(Message msg) {
-        // TODO what does each layer process with these methods
-        // TODO other than locating interface/protocol
-        // TODO the return values of these methods? void or other values
-    }
-
-    @Override
-    public void insertFromLowerLayer(Message msg) {
-
-    }
 
     private LinkedList<LinkInterface> linkInterfaces;
     private LinkedList<LinkProtocol> linkProtocols;
+
+    public LinkLayer(LinkedList<LinkProtocol> linkProtocols, LinkedList<Interface> phyInterfaces){
+        this.linkProtocols = linkProtocols;
+        for(var protocol : linkProtocols){
+
+        }
+    }
 
     @Override
     public void onEvent(Event event) {
