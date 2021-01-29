@@ -2,6 +2,9 @@ package cz.praguecollege;
 
 public abstract class Message {
     private Message encapsulatedMessage;
+    public IPAddress destinationIP;
+    public IPAddress sourceIP;
+    public String rawData;
 
     public void encapsulate(Message message){
         encapsulatedMessage = message;
@@ -14,14 +17,8 @@ public abstract class Message {
     }
 
     public abstract int getProtocol();
-}
-
-class NetLayerMessage extends Message {
-
-
-
-    @Override
-    public int getProtocol() {
-        return 0;
-    }
+    public abstract String getContent();
+    public abstract void setContent(String content);
+    // TODO what a message is composed of
+    // TODO is it the same as packet, frame or ...
 }
